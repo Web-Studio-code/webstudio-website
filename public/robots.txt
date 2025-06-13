@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://web-studio.info
+
+# Sitemaps
+Sitemap: https://web-studio.info/sitemap.xml
