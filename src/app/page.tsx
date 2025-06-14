@@ -123,7 +123,9 @@ export default function HomePage() {
                   <Image
                     src={avatar}
                     alt={name}
-                    className="w-12 h-12 rounded-full object-cover mr-4"
+                    width={48}
+                    height={48}
+                    className="rounded-full object-cover mr-4"
                   />
                   <div>
                     <p className="font-semibold">{name}</p>
