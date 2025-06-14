@@ -2,13 +2,11 @@
 import { NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
-// no `export const runtime = 'edge'` here → uses Node.js runtime
+// ne eksplicitiramo `runtime = 'edge'` → koristi Node.js runtime
 
-// pull SMTP creds from env
 const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, CONTACT_TO_EMAIL } =
   process.env
 
-// create transporter once (Node runtime supports `stream`)
 const transporter = nodemailer.createTransport({
   host: SMTP_HOST,
   port: Number(SMTP_PORT),
@@ -25,10 +23,8 @@ export async function POST(request: Request) {
       )
     }
 
-    // verify connection (will throw if creds bad)
     await transporter.verify()
 
-    // send email
     await transporter.sendMail({
       from: `"WebStudio Kontakt" <${SMTP_USER}>`,
       to: CONTACT_TO_EMAIL!,
@@ -37,10 +33,12 @@ export async function POST(request: Request) {
     })
 
     return NextResponse.json({ ok: true })
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error('Contact API error:', err)
+    const errorMessage =
+      err instanceof Error ? err.message : 'Nezvēzdan interno greška'
     return NextResponse.json(
-      { error: err.message || 'Internal Server Error' },
+      { error: errorMessage },
       { status: 500 }
     )
   }
