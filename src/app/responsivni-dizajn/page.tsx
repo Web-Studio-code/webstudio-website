@@ -1,6 +1,6 @@
 // src/app/responsivni-dizajn/page.tsx
 import Image from 'next/image'
-import Link from 'next/link'
+
 import {
   DevicePhoneMobileIcon,
   ArrowsRightLeftIcon,

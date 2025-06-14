@@ -1,6 +1,6 @@
 // src/app/page.tsx
 'use client'
-
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   GlobeAltIcon,
@@ -120,7 +120,7 @@ export default function HomePage() {
                   {quote}
                 </blockquote>
                 <div className="flex items-center mt-4">
-                  <img
+                  <Image
                     src={avatar}
                     alt={name}
                     className="w-12 h-12 rounded-full object-cover mr-4"

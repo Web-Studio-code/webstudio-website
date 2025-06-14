@@ -8,7 +8,7 @@ import {
   MapPinIcon,
   ClockIcon,
 } from '@heroicons/react/24/outline'
-import Link from 'next/link'
+
 
 function generateCaptcha(length = 5) {
   const chars =
