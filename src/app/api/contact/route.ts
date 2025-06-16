@@ -26,7 +26,7 @@ export async function POST(request: Request) {
     await transporter.verify()
 
     await transporter.sendMail({
-      from: `"WebStudio Kontakt" <${SMTP_USER}>`,
+      from: `"Sajtko Kontakt" <${SMTP_USER}>`,
       to: CONTACT_TO_EMAIL!,
       subject: `Nova poruka od ${name}`,
       text: `Ime: ${name}\nEmail: ${email}\n\n${message}`,

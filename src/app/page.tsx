@@ -36,7 +36,7 @@ export default function HomePage() {
       name: 'Marko Marković',
       role: 'CEO, Acme Corp',
       quote:
-        'WebStudio je transformisao naš online nastup – konverzije su porasle za 80 %!',
+        'Sajtko je transformisao naš online nastup – konverzije su porasle za 80 %!',
       avatar: '/avatars/marko.jpg',
     },
     {

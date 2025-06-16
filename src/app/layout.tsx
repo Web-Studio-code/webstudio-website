@@ -6,19 +6,19 @@ import CookieBanner from '../components/CookieBanner'
 //import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
-  title: 'WebStudio – Izrada web sajtova',
+  title: 'Sajtko – Izrada web sajtova',
   description: 'Profesionalna izrada web sajtova po meri',
   openGraph: {
     type: 'website',
     locale: 'sr_RS',
     url: 'https://web-studio.info',
-    siteName: 'WebStudio',
+    siteName: 'Sajtko',
     images: [
       {
         url: 'https://web-studio.info/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'WebStudio – Izrada web sajtova',
+        alt: 'Sajtko – Izrada web sajtova',
       },
     ],
   },
@@ -74,7 +74,7 @@ export default function RootLayout({
         {/* Footer */}
         <footer className="bg-white">
           <div className="max-w-7xl mx-auto px-6 py-6 text-center text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} WebStudio. Sva prava zadržana.
+            &copy; {new Date().getFullYear()} Sajtko. Sva prava zadržana.
           </div>
         </footer>
       </body>
