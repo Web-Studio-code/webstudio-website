@@ -3,6 +3,7 @@ import './globals.css'
 import Script from 'next/script'
 import Header from '../components/Header'
 import CookieBanner from '../components/CookieBanner'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   title: 'WebStudio – Izrada web sajtova',
